@@ -62,8 +62,8 @@ const SolarPanels = () => {
                       {panel.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <div className="aspect-square bg-background rounded-md flex items-center justify-center p-4">
+                  <CardContent className="p-2">
+                    <div className="w-full h-80 bg-background rounded-md flex items-center justify-center p-2">
                       <img 
                         src={panel.image} 
                         alt={panel.name} 
