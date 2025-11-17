@@ -55,9 +55,15 @@ const SolarPanels = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
               {solarPanels.map((panel, index) => (
-                <Card key={index} className="shadow-card hover:shadow-hover transition-all duration-300 overflow-hidden">
-                  <CardContent className="p-4">
-                    <div className="w-full h-96 bg-background rounded-md flex items-center justify-center mb-4">
+                <Card key={index} className="shadow-card hover:shadow-hover transition-all duration-300">
+                  <CardHeader>
+                    <CardTitle className="text-center text-primary">{panel.name}</CardTitle>
+                    <CardDescription className="text-center">
+                      {panel.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-2">
+                    <div className="w-full h-80 bg-background rounded-md flex items-center justify-center p-2">
                       <img 
                         src={panel.image} 
                         alt={panel.name} 
@@ -65,12 +71,6 @@ const SolarPanels = () => {
                       />
                     </div>
                   </CardContent>
-                  <CardHeader className="pt-0">
-                    <CardTitle className="text-center text-primary">{panel.name}</CardTitle>
-                    <CardDescription className="text-center">
-                      {panel.description}
-                    </CardDescription>
-                  </CardHeader>
                 </Card>
               ))}
             </div>
