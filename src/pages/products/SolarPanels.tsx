@@ -1,16 +1,24 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import canadianSolar from "@/assets/products/canadian-solar.png";
+import jinkoSolar from "@/assets/products/jinko-solar.png";
+import yingliSolar from "@/assets/products/yingli-solar.png";
+import jaSolar from "@/assets/products/ja-solar.png";
+import longiSolar from "@/assets/products/longi-solar.png";
+import trinaSolar from "@/assets/products/trina-solar.png";
+import astronergySolar from "@/assets/products/astronergy-solar.png";
+import aikoSolar from "@/assets/products/aiko-solar.png";
 
 const solarPanels = [
-  { name: "CANADIAN SOLAR", description: "High-efficiency monocrystalline panels with excellent performance" },
-  { name: "JINKO SOLAR", description: "Industry-leading solar modules with superior quality" },
-  { name: "YINGLI SOLAR", description: "Reliable solar panels with proven track record" },
-  { name: "JA SOLAR", description: "Advanced photovoltaic technology for maximum efficiency" },
-  { name: "LONGI SOLAR", description: "Premium monocrystalline solar panels" },
-  { name: "TRINA SOLAR", description: "Trusted brand with global presence and reliability" },
-  { name: "ASTRONERGY", description: "High-performance solar modules for all applications" },
-  { name: "AIKO", description: "Innovative solar technology with exceptional output" },
+  { name: "CANADIAN SOLAR", description: "High-efficiency monocrystalline panels with excellent performance", image: canadianSolar },
+  { name: "JINKO SOLAR", description: "Industry-leading solar modules with superior quality", image: jinkoSolar },
+  { name: "YINGLI SOLAR", description: "Reliable solar panels with proven track record", image: yingliSolar },
+  { name: "JA SOLAR", description: "Advanced photovoltaic technology for maximum efficiency", image: jaSolar },
+  { name: "LONGI SOLAR", description: "Premium monocrystalline solar panels", image: longiSolar },
+  { name: "TRINA SOLAR", description: "Trusted brand with global presence and reliability", image: trinaSolar },
+  { name: "ASTRONERGY", description: "High-performance solar modules for all applications", image: astronergySolar },
+  { name: "AIKO", description: "Innovative solar technology with exceptional output", image: aikoSolar },
 ];
 
 const SolarPanels = () => {
@@ -55,10 +63,12 @@ const SolarPanels = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="aspect-square bg-background rounded-md flex items-center justify-center mb-4">
-                      <div className="text-6xl font-bold text-primary/20">
-                        {panel.name.charAt(0)}
-                      </div>
+                    <div className="aspect-square bg-background rounded-md flex items-center justify-center p-4">
+                      <img 
+                        src={panel.image} 
+                        alt={panel.name} 
+                        className="w-full h-full object-contain"
+                      />
                     </div>
                   </CardContent>
                 </Card>
