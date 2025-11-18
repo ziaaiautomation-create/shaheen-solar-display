@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Sun, Factory, Home, CheckCircle2, Users, Award, HeadphonesIcon } from "lucide-react";
+import { ArrowRight, Sun, Factory, Home, CheckCircle2, Users, Award, HeadphonesIcon, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useState, useRef } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-solar.jpg";
@@ -10,7 +11,22 @@ import commercialImg from "@/assets/commercial-solar.jpg";
 import industrialImg from "@/assets/industrial-solar.jpg";
 import shaheenSolarIcon from "@/assets/shaheen-solar-icon.jpg";
 
+
 const Index = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -189,86 +205,113 @@ const Index = () => {
                 Premium quality solar equipment from world-renowned manufacturers
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="shadow-card hover:shadow-hover transition-all duration-300">
-                <CardHeader>
-                  <CardTitle>Solar Inverters</CardTitle>
-                  <CardDescription>
-                    High-efficiency inverters from leading brands for reliable power conversion
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Link to="/products/solar-inverters">
-                    <Button variant="outline" className="w-full">
-                      View Products <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+            
+            {/* Scrollable Products Container */}
+            <div className="relative">
+              {/* Left Scroll Button */}
+              <button
+                onClick={scrollLeft}
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-primary text-primary-foreground p-3 rounded-full shadow-lg hover:bg-primary/90 transition-all"
+                aria-label="Scroll left"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </button>
 
-              <Card className="shadow-card hover:shadow-hover transition-all duration-300">
-                <CardHeader>
-                  <CardTitle>Solar Panels</CardTitle>
-                  <CardDescription>
-                    Premium solar panels with high efficiency and long-lasting performance
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Link to="/products/solar-panels">
-                    <Button variant="outline" className="w-full">
-                      View Products <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+              {/* Right Scroll Button */}
+              <button
+                onClick={scrollRight}
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primary text-primary-foreground p-3 rounded-full shadow-lg hover:bg-primary/90 transition-all"
+                aria-label="Scroll right"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </button>
 
-              <Card className="shadow-card hover:shadow-hover transition-all duration-300">
-                <CardHeader>
-                  <CardTitle>Batteries</CardTitle>
-                  <CardDescription>
-                    Advanced lithium-ion batteries for efficient energy storage
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Link to="/products/batteries">
-                    <Button variant="outline" className="w-full">
-                      View Products <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+              {/* Scrollable Container */}
+              <div
+                ref={scrollContainerRef}
+                className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth px-12"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                <Card className="min-w-[350px] shadow-card hover:shadow-hover transition-all duration-300 flex-shrink-0">
+                  <CardHeader>
+                    <CardTitle>Solar Inverters</CardTitle>
+                    <CardDescription>
+                      High-efficiency inverters from leading brands for reliable power conversion
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Link to="/products/solar-inverters">
+                      <Button variant="outline" className="w-full">
+                        View Products <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
 
-              <Card className="shadow-card hover:shadow-hover transition-all duration-300">
-                <CardHeader>
-                  <CardTitle>Structure</CardTitle>
-                  <CardDescription>
-                    Durable mounting structures and support systems for solar installations
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Link to="/products/structure">
-                    <Button variant="outline" className="w-full">
-                      View Products <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+                <Card className="min-w-[350px] shadow-card hover:shadow-hover transition-all duration-300 flex-shrink-0">
+                  <CardHeader>
+                    <CardTitle>Solar Panels</CardTitle>
+                    <CardDescription>
+                      Premium solar panels with high efficiency and long-lasting performance
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Link to="/products/solar-panels">
+                      <Button variant="outline" className="w-full">
+                        View Products <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
 
-              <Card className="shadow-card hover:shadow-hover transition-all duration-300">
-                <CardHeader>
-                  <CardTitle>Net Metering</CardTitle>
-                  <CardDescription>
-                    Advanced metering solutions for monitoring and optimizing energy usage
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Link to="/products/metering">
-                    <Button variant="outline" className="w-full">
-                      View Products <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+                <Card className="min-w-[350px] shadow-card hover:shadow-hover transition-all duration-300 flex-shrink-0">
+                  <CardHeader>
+                    <CardTitle>Batteries</CardTitle>
+                    <CardDescription>
+                      Advanced lithium-ion batteries for efficient energy storage
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Link to="/products/batteries">
+                      <Button variant="outline" className="w-full">
+                        View Products <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+
+                <Card className="min-w-[350px] shadow-card hover:shadow-hover transition-all duration-300 flex-shrink-0">
+                  <CardHeader>
+                    <CardTitle>Structure</CardTitle>
+                    <CardDescription>
+                      Durable mounting structures and support systems for solar installations
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Link to="/products/structure">
+                      <Button variant="outline" className="w-full">
+                        View Products <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+
+                <Card className="min-w-[350px] shadow-card hover:shadow-hover transition-all duration-300 flex-shrink-0">
+                  <CardHeader>
+                    <CardTitle>Net Metering</CardTitle>
+                    <CardDescription>
+                      Advanced metering solutions for monitoring and optimizing energy usage
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Link to="/products/metering">
+                      <Button variant="outline" className="w-full">
+                        View Products <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </section>
