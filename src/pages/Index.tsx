@@ -184,12 +184,12 @@ const Index = () => {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Products</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Products</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Premium quality solar equipment from world-renowned manufacturers
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card className="shadow-card hover:shadow-hover transition-all duration-300">
                 <CardHeader>
                   <CardTitle>Solar Inverters</CardTitle>
@@ -224,13 +224,45 @@ const Index = () => {
 
               <Card className="shadow-card hover:shadow-hover transition-all duration-300">
                 <CardHeader>
-                  <CardTitle>Solar Batteries</CardTitle>
+                  <CardTitle>Batteries</CardTitle>
                   <CardDescription>
                     Advanced lithium-ion batteries for efficient energy storage
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Link to="/products/batteries">
+                    <Button variant="outline" className="w-full">
+                      View Products <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-card hover:shadow-hover transition-all duration-300">
+                <CardHeader>
+                  <CardTitle>Structure</CardTitle>
+                  <CardDescription>
+                    Durable mounting structures and support systems for solar installations
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Link to="/products/structure">
+                    <Button variant="outline" className="w-full">
+                      View Products <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-card hover:shadow-hover transition-all duration-300">
+                <CardHeader>
+                  <CardTitle>Net Metering</CardTitle>
+                  <CardDescription>
+                    Advanced metering solutions for monitoring and optimizing energy usage
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Link to="/products/metering">
                     <Button variant="outline" className="w-full">
                       View Products <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -289,9 +321,9 @@ const Index = () => {
               </div>
               
               {/* Center Circle with Logo */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border-8 border-primary bg-white flex items-center justify-center overflow-hidden"
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border-8 border-primary flex items-center justify-center overflow-hidden bg-white"
                    style={{ filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.15))' }}>
-                <img src={shaheenSolarIcon} alt="Shaheen Solar" className="w-40 h-40 object-contain" />
+                <img src={shaheenSolarIcon} alt="Shaheen Solar" className="w-full h-full object-cover" />
               </div>
             </div>
             
