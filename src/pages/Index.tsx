@@ -408,6 +408,92 @@ const Index = () => {
           </div>
         </section>
 
+        {/* CTA Section */}
+        <section className="py-20 bg-primary">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+              Harness Solar Power for a Brighter Future
+            </h2>
+            <p className="text-lg text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
+              Ready to make the switch to clean, renewable energy? Our experts are here to help you every step of the way.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href="tel:+923175486662">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8">
+                  📞 +92 317 5486662
+                </Button>
+              </a>
+              <Link to="/contact">
+                <Button size="lg" variant="secondary" className="px-8">
+                  Get a Free Quote
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ & Quote Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* FAQ Section */}
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">FAQ's</h2>
+                <p className="text-lg text-muted-foreground">Answers To Your Questions</p>
+              </div>
+
+              {/* Request Quote Form */}
+              <div>
+                <Card className="shadow-card">
+                  <CardHeader>
+                    <CardTitle className="text-2xl text-primary">Request a Quote</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <form className="space-y-4">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium mb-2">Name*</label>
+                        <input
+                          type="text"
+                          id="name"
+                          className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-medium mb-2">Email*</label>
+                        <input
+                          type="email"
+                          id="email"
+                          className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="phone" className="block text-sm font-medium mb-2">Phone*</label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+                        <textarea
+                          id="message"
+                          rows={4}
+                          className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                      </div>
+                      <Button type="submit" className="w-full">Submit Request</Button>
+                    </form>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Statistics Section */}
         <section className="py-16 bg-primary">
           <div className="container mx-auto px-4">
