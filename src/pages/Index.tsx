@@ -110,49 +110,69 @@ const Index = () => {
         </section>
 
         {/* Our Work Process Section */}
-        <section className="py-20 bg-muted">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Work Process</h2>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Work Process</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Simple and transparent process from consultation to installation
+                A streamlined process that takes you from consultation to installation and beyond.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  1
+                <div className="relative inline-block mb-6">
+                  <div className="w-32 h-32 bg-primary rounded-full flex items-center justify-center mx-auto">
+                    <CheckCircle2 className="w-16 h-16 text-primary-foreground" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    1
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Consultation & Survey</h3>
-                <p className="text-muted-foreground">
-                  Free site visit and energy assessment to understand your requirements
+                <h3 className="text-xl font-bold text-foreground mb-3">Consultation & Survey</h3>
+                <p className="text-muted-foreground text-sm">
+                  We assess your energy needs and conduct a site survey to determine the best solar solution.
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  2
+                <div className="relative inline-block mb-6">
+                  <div className="w-32 h-32 bg-primary rounded-full flex items-center justify-center mx-auto">
+                    <Sun className="w-16 h-16 text-primary-foreground" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    2
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Customized Design</h3>
-                <p className="text-muted-foreground">
-                  Tailored solar system design optimized for maximum efficiency
+                <h3 className="text-xl font-bold text-foreground mb-3">Customized Design</h3>
+                <p className="text-muted-foreground text-sm">
+                  Our experts design a tailored solar system that maximizes efficiency and savings.
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  3
+                <div className="relative inline-block mb-6">
+                  <div className="w-32 h-32 bg-primary rounded-full flex items-center justify-center mx-auto">
+                    <Factory className="w-16 h-16 text-primary-foreground" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    3
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Expert Installation</h3>
-                <p className="text-muted-foreground">
-                  Professional installation by certified technicians with quality materials
+                <h3 className="text-xl font-bold text-foreground mb-3">Expert Installation</h3>
+                <p className="text-muted-foreground text-sm">
+                  Professional installation by certified technicians ensuring quality and safety standards.
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  4
+                <div className="relative inline-block mb-6">
+                  <div className="w-32 h-32 bg-primary rounded-full flex items-center justify-center mx-auto">
+                    <HeadphonesIcon className="w-16 h-16 text-primary-foreground" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    4
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Support & Maintenance</h3>
-                <p className="text-muted-foreground">
-                  Ongoing support and maintenance to ensure optimal performance
+                <h3 className="text-xl font-bold text-foreground mb-3">Support & Maintenance</h3>
+                <p className="text-muted-foreground text-sm">
+                  Ongoing support and maintenance to keep your system running at peak performance.
                 </p>
               </div>
             </div>
