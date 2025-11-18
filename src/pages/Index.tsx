@@ -57,7 +57,7 @@ const Index = () => {
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">Benefits to Save Energy</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4">Benefits to Save Energy</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <Card className="shadow-card hover:shadow-hover transition-all duration-300 text-center p-8">
@@ -478,7 +478,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="tel:+923175486662">
                 <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8">
-                  📞 +92 317 5486662
+                  +92 317 5486662
                 </Button>
               </a>
               <Link to="/contact">
@@ -491,59 +491,85 @@ const Index = () => {
         </section>
 
         {/* FAQ & Quote Section */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               {/* FAQ Section */}
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">FAQ's</h2>
-                <p className="text-lg text-muted-foreground">Answers To Your Questions</p>
+                <h2 className="text-4xl md:text-5xl font-bold text-primary mb-2">FAQ's</h2>
+                <p className="text-xl text-muted-foreground mb-8">Answers To Your Questions</p>
+                
+                <div className="space-y-4">
+                  <div className="bg-background p-6 rounded-lg shadow-card">
+                    <h3 className="text-lg font-semibold text-foreground mb-2">How much can I save with solar energy?</h3>
+                    <p className="text-muted-foreground">Savings depend on your energy consumption and system size. Most customers see 50-80% reduction in electricity bills.</p>
+                  </div>
+                  
+                  <div className="bg-background p-6 rounded-lg shadow-card">
+                    <h3 className="text-lg font-semibold text-foreground mb-2">What is the warranty on solar panels?</h3>
+                    <p className="text-muted-foreground">Our solar panels come with 25-year performance warranty and 10-year product warranty from manufacturers.</p>
+                  </div>
+                  
+                  <div className="bg-background p-6 rounded-lg shadow-card">
+                    <h3 className="text-lg font-semibold text-foreground mb-2">How long does installation take?</h3>
+                    <p className="text-muted-foreground">Typical residential installation takes 1-3 days. Commercial and industrial projects vary based on system size.</p>
+                  </div>
+                  
+                  <div className="bg-background p-6 rounded-lg shadow-card">
+                    <h3 className="text-lg font-semibold text-foreground mb-2">Do solar panels work during cloudy days?</h3>
+                    <p className="text-muted-foreground">Yes, solar panels generate electricity even on cloudy days, though at reduced efficiency compared to sunny days.</p>
+                  </div>
+                </div>
               </div>
 
               {/* Request Quote Form */}
               <div>
-                <Card className="shadow-card">
+                <Card className="shadow-card bg-background">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-primary">Request a Quote</CardTitle>
+                    <CardTitle className="text-3xl text-primary mb-2">Request a Quote</CardTitle>
+                    <p className="text-muted-foreground">Fill out the form and we'll get back to you shortly</p>
                   </CardHeader>
                   <CardContent>
                     <form className="space-y-4">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium mb-2">Name*</label>
+                        <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">Name*</label>
                         <input
                           type="text"
                           id="name"
-                          className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          placeholder="Your full name"
+                          className="w-full px-4 py-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-background"
                           required
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium mb-2">Email*</label>
-                        <input
-                          type="email"
-                          id="email"
-                          className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="phone" className="block text-sm font-medium mb-2">Phone*</label>
+                        <label htmlFor="phone" className="block text-sm font-medium mb-2 text-foreground">Phone Number*</label>
                         <input
                           type="tel"
                           id="phone"
-                          className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                          placeholder="Your phone number"
+                          className="w-full px-4 py-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-background"
                           required
                         />
                       </div>
                       <div>
-                        <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
-                        <textarea
-                          id="message"
-                          rows={4}
-                          className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                        <label htmlFor="email" className="block text-sm font-medium mb-2 text-foreground">Email</label>
+                        <input
+                          type="email"
+                          id="email"
+                          placeholder="Your email address"
+                          className="w-full px-4 py-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-background"
                         />
                       </div>
-                      <Button type="submit" className="w-full">Submit Request</Button>
+                      <div>
+                        <label htmlFor="message" className="block text-sm font-medium mb-2 text-foreground">Message</label>
+                        <textarea
+                          id="message"
+                          rows={5}
+                          placeholder="Tell us about your project"
+                          className="w-full px-4 py-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-background"
+                        />
+                      </div>
+                      <Button type="submit" className="w-full py-6 text-lg">Submit Form</Button>
                     </form>
                   </CardContent>
                 </Card>
