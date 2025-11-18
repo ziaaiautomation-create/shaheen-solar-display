@@ -1,18 +1,28 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import maxpowerImg from "@/assets/products/maxpower-inverter.png";
+import solarmaxImg from "@/assets/products/solarmax-inverter.png";
+import inverexImg from "@/assets/products/inverex-inverter.png";
+import primaxImg from "@/assets/products/primax-inverter.png";
+import sungrowImg from "@/assets/products/sungrow-inverter.png";
+import chintImg from "@/assets/products/chint-inverter.png";
+import goodweImg from "@/assets/products/goodwe-inverter.png";
+import foxImg from "@/assets/products/fox-inverter.png";
+import huaweiImg from "@/assets/products/huawei-inverter.png";
+import sajImg from "@/assets/products/saj-inverter.png";
 
 const inverters = [
-  { name: "MAXPOWER", type: "On-grid / Off-grid" },
-  { name: "SOLARMAX", type: "On-grid / Off-grid" },
-  { name: "INVEREX", type: "On-grid / Off-grid" },
-  { name: "PRIMAX", type: "On-grid / Off-grid" },
-  { name: "SUNGROW", type: "On-grid / Off-grid" },
-  { name: "CHINT", type: "On-grid / Off-grid" },
-  { name: "GOODWE", type: "On-grid / Off-grid" },
-  { name: "FOX", type: "On-grid / Off-grid" },
-  { name: "HUAWEI", type: "On-grid / Off-grid" },
-  { name: "SAJ", type: "On-grid / Off-grid" },
+  { name: "MAXPOWER", type: "On-grid / Off-grid", image: maxpowerImg },
+  { name: "SOLARMAX", type: "On-grid / Off-grid", image: solarmaxImg },
+  { name: "INVEREX", type: "On-grid / Off-grid", image: inverexImg },
+  { name: "PRIMAX", type: "On-grid / Off-grid", image: primaxImg },
+  { name: "SUNGROW", type: "On-grid / Off-grid", image: sungrowImg },
+  { name: "CHINT", type: "On-grid / Off-grid", image: chintImg },
+  { name: "GOODWE", type: "On-grid / Off-grid", image: goodweImg },
+  { name: "FOX", type: "On-grid / Off-grid", image: foxImg },
+  { name: "HUAWEI", type: "On-grid / Off-grid", image: huaweiImg },
+  { name: "SAJ", type: "On-grid / Off-grid", image: sajImg },
   { name: "VOLTECK", type: "On-grid / Off-grid" },
   { name: "SMA", type: "On-grid / Off-grid" },
 ];
@@ -58,11 +68,19 @@ const SolarInverters = () => {
                       {inverter.type}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <div className="aspect-square bg-background rounded-md flex items-center justify-center mb-4">
-                      <div className="text-6xl font-bold text-primary/20">
-                        {inverter.name.charAt(0)}
-                      </div>
+                  <CardContent className="p-2">
+                    <div className="w-full h-80 bg-background rounded-md flex items-center justify-center p-2">
+                      {inverter.image ? (
+                        <img 
+                          src={inverter.image} 
+                          alt={inverter.name}
+                          className="w-full h-full object-contain"
+                        />
+                      ) : (
+                        <div className="text-6xl font-bold text-primary/20">
+                          {inverter.name.charAt(0)}
+                        </div>
+                      )}
                     </div>
                   </CardContent>
                 </Card>
