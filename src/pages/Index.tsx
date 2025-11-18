@@ -578,29 +578,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Statistics Section */}
-        <section className="py-16 bg-primary">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">500+</div>
-                <div className="text-primary-foreground/80 text-sm md:text-base">Projects Completed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">15+</div>
-                <div className="text-primary-foreground/80 text-sm md:text-base">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">98%</div>
-                <div className="text-primary-foreground/80 text-sm md:text-base">Client Satisfaction</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">50+</div>
-                <div className="text-primary-foreground/80 text-sm md:text-base">Expert Team Members</div>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
