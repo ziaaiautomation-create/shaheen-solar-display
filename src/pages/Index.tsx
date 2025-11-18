@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Sun, Factory, Home, CheckCircle2, Users, Award, HeadphonesIcon, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, Sun, Factory, Home, CheckCircle2, Users, Award, HeadphonesIcon, ChevronLeft, ChevronRight, Settings, DollarSign, Wrench, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState, useRef } from "react";
@@ -50,6 +50,64 @@ const Index = () => {
                 Contact Us <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">Benefits to Save Energy</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <Card className="shadow-card hover:shadow-hover transition-all duration-300 text-center p-8">
+                <CardHeader>
+                  <div className="w-24 h-24 bg-background rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-border">
+                    <Settings className="h-12 w-12 text-foreground" />
+                  </div>
+                  <CardTitle className="text-xl font-bold mb-4">RELIABLE POWER</CardTitle>
+                  <CardDescription className="text-base">
+                    Our solar systems provide a steady and dependable power supply, even during load-shedding.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="shadow-card hover:shadow-hover transition-all duration-300 text-center p-8">
+                <CardHeader>
+                  <div className="w-24 h-24 bg-background rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-border">
+                    <DollarSign className="h-12 w-12 text-foreground" />
+                  </div>
+                  <CardTitle className="text-xl font-bold mb-4">COST SAVINGS</CardTitle>
+                  <CardDescription className="text-base">
+                    Switching to solar energy helps reduce your electricity bills, saving you money in the long run.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="shadow-card hover:shadow-hover transition-all duration-300 text-center p-8">
+                <CardHeader>
+                  <div className="w-24 h-24 bg-background rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-border">
+                    <Wrench className="h-12 w-12 text-foreground" />
+                  </div>
+                  <CardTitle className="text-xl font-bold mb-4">LOW MAINTENANCE</CardTitle>
+                  <CardDescription className="text-base">
+                    Solar systems require minimal maintenance, offering you hassle-free, long-term energy solutions.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="shadow-card hover:shadow-hover transition-all duration-300 text-center p-8">
+                <CardHeader>
+                  <div className="w-24 h-24 bg-background rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-border">
+                    <Leaf className="h-12 w-12 text-foreground" />
+                  </div>
+                  <CardTitle className="text-xl font-bold mb-4">ECO-FRIENDLY</CardTitle>
+                  <CardDescription className="text-base">
+                    By using solar energy, you reduce your carbon footprint and contribute to a cleaner, greener planet.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </div>
           </div>
         </section>
 
