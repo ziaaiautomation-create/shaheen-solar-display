@@ -62,11 +62,11 @@ const Projects = () => {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-hero text-primary-foreground py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-3xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Projects</h1>
-              <p className="text-xl text-primary-foreground/90">
+        <section className="bg-gradient-hero text-primary-foreground py-24 md:py-32">
+          <div className="w-full px-6 md:px-12 lg:px-20">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">Our Projects</h1>
+              <p className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/90">
                 Explore our portfolio of successful solar installations across Pakistan
               </p>
             </div>
@@ -74,56 +74,56 @@ const Projects = () => {
         </section>
 
         {/* Stats Section */}
-        <section className="py-12 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <section className="py-20 md:py-24 bg-background">
+          <div className="w-full px-6 md:px-12 lg:px-20">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 max-w-[1600px] mx-auto">
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">500+</div>
-                <div className="text-muted-foreground">Projects Completed</div>
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-4">500+</div>
+                <div className="text-muted-foreground text-lg md:text-xl">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">50MW+</div>
-                <div className="text-muted-foreground">Total Capacity Installed</div>
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-4">50MW+</div>
+                <div className="text-muted-foreground text-lg md:text-xl">Total Capacity Installed</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">98%</div>
-                <div className="text-muted-foreground">Customer Satisfaction</div>
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-4">98%</div>
+                <div className="text-muted-foreground text-lg md:text-xl">Customer Satisfaction</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">15+</div>
-                <div className="text-muted-foreground">Years Experience</div>
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-4">15+</div>
+                <div className="text-muted-foreground text-lg md:text-xl">Years Experience</div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Projects Grid */}
-        <section className="py-12 bg-muted">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <section className="py-24 md:py-32 bg-muted/30">
+          <div className="w-full px-6 md:px-12 lg:px-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-[1800px] mx-auto">
               {projects.map((project, index) => (
-                <Card key={index} className="shadow-card hover:shadow-hover transition-all duration-300">
-                  <CardHeader>
-                    <div className="flex items-start justify-between mb-2">
-                      <Badge variant="secondary">{project.type}</Badge>
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Zap className="h-4 w-4 mr-1" />
-                        {project.capacity}
-                      </div>
-                    </div>
-                    <CardTitle className="text-xl">{project.title}</CardTitle>
-                    <CardDescription>{project.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-2 text-sm text-muted-foreground">
-                      <div className="flex items-center">
-                        <MapPin className="h-4 w-4 mr-2 text-primary" />
-                        {project.location}
-                      </div>
-                      <div className="flex items-center">
-                        <Calendar className="h-4 w-4 mr-2 text-primary" />
+                <Card key={index} className="shadow-card hover:shadow-hover transition-all duration-300 overflow-hidden">
+                  <CardHeader className="p-8 md:p-10">
+                    <div className="flex items-center justify-between mb-4">
+                      <Badge variant="secondary" className="text-base px-4 py-2">{project.type}</Badge>
+                      <div className="flex items-center text-muted-foreground text-sm">
+                        <Calendar className="h-5 w-5 mr-2" />
                         {project.date}
                       </div>
+                    </div>
+                    <CardTitle className="text-2xl md:text-3xl mb-4">{project.title}</CardTitle>
+                    <CardDescription className="text-base md:text-lg leading-relaxed mb-6">
+                      {project.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-8 md:p-10 pt-0 space-y-4">
+                    <div className="flex items-center text-foreground">
+                      <Zap className="h-6 w-6 mr-3 text-primary" />
+                      <span className="font-semibold text-lg">Capacity: {project.capacity}</span>
+                    </div>
+                    <div className="flex items-center text-foreground">
+                      <MapPin className="h-6 w-6 mr-3 text-primary" />
+                      <span className="font-semibold text-lg">{project.location}</span>
                     </div>
                   </CardContent>
                 </Card>
@@ -133,12 +133,17 @@ const Projects = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Want to Start Your Solar Journey?</h2>
-            <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-8">
-              Join hundreds of satisfied customers who have switched to clean, affordable solar energy
+        <section className="py-24 md:py-32 bg-primary text-primary-foreground">
+          <div className="w-full px-6 md:px-12 lg:px-20 text-center">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">Start Your Solar Journey Today</h2>
+            <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto opacity-90">
+              Join hundreds of satisfied customers who have made the switch to clean, renewable energy
             </p>
+            <a href="/contact" className="inline-block">
+              <button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-12 py-7 rounded-lg text-xl font-semibold shadow-lg transition-all hover:scale-105">
+                Get Started
+              </button>
+            </a>
           </div>
         </section>
       </main>
