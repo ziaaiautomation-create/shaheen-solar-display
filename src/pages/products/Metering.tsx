@@ -10,12 +10,12 @@ const Metering = () => {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-hero text-primary-foreground py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-3xl mx-auto">
-              <Zap className="h-16 w-16 mx-auto mb-6" />
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Net Metering</h1>
-              <p className="text-xl text-primary-foreground/90">
+        <section className="bg-gradient-hero text-primary-foreground py-24 md:py-32">
+          <div className="w-full px-6 md:px-12 lg:px-20">
+            <div className="text-center max-w-4xl mx-auto">
+              <Zap className="h-20 w-20 md:h-24 md:w-24 mx-auto mb-8" />
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">Net Metering</h1>
+              <p className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/90">
                 Maximize your solar investment with net metering solutions
               </p>
             </div>
@@ -23,11 +23,11 @@ const Metering = () => {
         </section>
 
         {/* Introduction Section */}
-        <section className="py-12 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6">What is Net Metering?</h2>
-              <p className="text-lg text-muted-foreground mb-8">
+        <section className="py-20 md:py-24 bg-background">
+          <div className="w-full px-6 md:px-12 lg:px-20">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8">What is Net Metering?</h2>
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
                 Net metering is a billing mechanism that credits solar energy system owners for the electricity they add to the grid. When your solar panels produce more electricity than you use, the excess power is fed back to the utility grid, and you receive credits on your electricity bill.
               </p>
             </div>
@@ -35,44 +35,44 @@ const Metering = () => {
         </section>
 
         {/* How It Works */}
-        <section className="py-12 bg-muted">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">How Net Metering Works</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+        <section className="py-24 md:py-32 bg-muted/30">
+          <div className="w-full px-6 md:px-12 lg:px-20">
+            <div className="max-w-[1600px] mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-16 md:mb-20">How Net Metering Works</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                <div className="text-center p-8 md:p-10 bg-background rounded-lg shadow-card">
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-3xl md:text-4xl font-bold mx-auto mb-6">
                     1
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">Solar Generation</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="text-2xl md:text-3xl font-semibold mb-4">Solar Generation</h3>
+                  <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                     Your solar panels generate electricity during daylight hours
                   </p>
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="text-center p-8 md:p-10 bg-background rounded-lg shadow-card">
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-3xl md:text-4xl font-bold mx-auto mb-6">
                     2
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">Power Usage</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="text-2xl md:text-3xl font-semibold mb-4">Power Usage</h3>
+                  <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                     Electricity powers your home or business first
                   </p>
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="text-center p-8 md:p-10 bg-background rounded-lg shadow-card">
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-3xl md:text-4xl font-bold mx-auto mb-6">
                     3
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">Export to Grid</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="text-2xl md:text-3xl font-semibold mb-4">Export to Grid</h3>
+                  <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                     Excess power is exported to the utility grid
                   </p>
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="text-center p-8 md:p-10 bg-background rounded-lg shadow-card">
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-3xl md:text-4xl font-bold mx-auto mb-6">
                     4
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">Earn Credits</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className="text-2xl md:text-3xl font-semibold mb-4">Earn Credits</h3>
+                  <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                     Receive credits on your electricity bill
                   </p>
                 </div>
@@ -181,43 +181,6 @@ const Metering = () => {
           </div>
         </section>
 
-        {/* Our Services Section */}
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6">Our Net Metering Services</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                We handle the entire net metering process for you, from initial application to final commissioning:
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                <div className="bg-muted p-6 rounded-lg text-left">
-                  <h3 className="font-semibold text-lg mb-2">Documentation & Application</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Complete preparation and submission of all required documents to NEPRA and your local DISCO
-                  </p>
-                </div>
-                <div className="bg-muted p-6 rounded-lg text-left">
-                  <h3 className="font-semibold text-lg mb-2">System Design & Installation</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Professional installation of grid-tied solar systems with all necessary safety equipment
-                  </p>
-                </div>
-                <div className="bg-muted p-6 rounded-lg text-left">
-                  <h3 className="font-semibold text-lg mb-2">Meter Installation Coordination</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Coordination with utility company for bidirectional meter installation and system testing
-                  </p>
-                </div>
-                <div className="bg-muted p-6 rounded-lg text-left">
-                  <h3 className="font-semibold text-lg mb-2">Commissioning & Support</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Final system commissioning and ongoing support for net metering operations
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />

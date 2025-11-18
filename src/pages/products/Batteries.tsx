@@ -10,12 +10,12 @@ const Batteries = () => {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-hero text-primary-foreground py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-3xl mx-auto">
-              <Battery className="h-16 w-16 mx-auto mb-6" />
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Lithium-ion Batteries</h1>
-              <p className="text-xl text-primary-foreground/90">
+        <section className="bg-gradient-hero text-primary-foreground py-24 md:py-32">
+          <div className="w-full px-6 md:px-12 lg:px-20">
+            <div className="text-center max-w-4xl mx-auto">
+              <Battery className="h-20 w-20 md:h-24 md:w-24 mx-auto mb-8" />
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">Lithium-ion Batteries</h1>
+              <p className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/90">
                 Advanced energy storage solutions for your solar system
               </p>
             </div>
@@ -23,10 +23,10 @@ const Batteries = () => {
         </section>
 
         {/* Introduction Section */}
-        <section className="py-12 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="text-lg text-muted-foreground mb-8">
+        <section className="py-20 md:py-24 bg-background">
+          <div className="w-full px-6 md:px-12 lg:px-20">
+            <div className="max-w-5xl mx-auto text-center">
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
                 Our lithium-ion battery solutions provide reliable energy storage for your solar power system. With superior efficiency, longer lifespan, and faster charging capabilities compared to traditional batteries, lithium-ion technology ensures you have power when you need it most.
               </p>
             </div>
@@ -34,46 +34,46 @@ const Batteries = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-12 bg-muted">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">Why Lithium-ion Batteries?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <Card className="shadow-card">
-                  <CardHeader>
-                    <Zap className="h-10 w-10 text-primary mb-3" />
-                    <CardTitle>High Efficiency</CardTitle>
-                    <CardDescription>
+        <section className="py-24 md:py-32 bg-muted/30">
+          <div className="w-full px-6 md:px-12 lg:px-20">
+            <div className="max-w-[1600px] mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-16 md:mb-20">Why Lithium-ion Batteries?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                <Card className="shadow-card p-8 md:p-10">
+                  <CardHeader className="p-0 pb-6">
+                    <Zap className="h-14 w-14 md:h-16 md:w-16 text-primary mb-4" />
+                    <CardTitle className="text-2xl md:text-3xl">High Efficiency</CardTitle>
+                    <CardDescription className="text-lg md:text-xl mt-4">
                       Up to 95% charge/discharge efficiency for maximum energy utilization
                     </CardDescription>
                   </CardHeader>
                 </Card>
 
-                <Card className="shadow-card">
-                  <CardHeader>
-                    <Clock className="h-10 w-10 text-primary mb-3" />
-                    <CardTitle>Long Lifespan</CardTitle>
-                    <CardDescription>
+                <Card className="shadow-card p-8 md:p-10">
+                  <CardHeader className="p-0 pb-6">
+                    <Clock className="h-14 w-14 md:h-16 md:w-16 text-primary mb-4" />
+                    <CardTitle className="text-2xl md:text-3xl">Long Lifespan</CardTitle>
+                    <CardDescription className="text-lg md:text-xl mt-4">
                       10+ years of reliable performance with minimal degradation
                     </CardDescription>
                   </CardHeader>
                 </Card>
 
-                <Card className="shadow-card">
-                  <CardHeader>
-                    <Battery className="h-10 w-10 text-primary mb-3" />
-                    <CardTitle>Fast Charging</CardTitle>
-                    <CardDescription>
+                <Card className="shadow-card p-8 md:p-10">
+                  <CardHeader className="p-0 pb-6">
+                    <Battery className="h-14 w-14 md:h-16 md:w-16 text-primary mb-4" />
+                    <CardTitle className="text-2xl md:text-3xl">Fast Charging</CardTitle>
+                    <CardDescription className="text-lg md:text-xl mt-4">
                       Rapid charging capability to store energy quickly during peak production
                     </CardDescription>
                   </CardHeader>
                 </Card>
 
-                <Card className="shadow-card">
-                  <CardHeader>
-                    <Shield className="h-10 w-10 text-primary mb-3" />
-                    <CardTitle>Safe & Reliable</CardTitle>
-                    <CardDescription>
+                <Card className="shadow-card p-8 md:p-10">
+                  <CardHeader className="p-0 pb-6">
+                    <Shield className="h-14 w-14 md:h-16 md:w-16 text-primary mb-4" />
+                    <CardTitle className="text-2xl md:text-3xl">Safe & Reliable</CardTitle>
+                    <CardDescription className="text-lg md:text-xl mt-4">
                       Advanced BMS protection with multiple safety features built-in
                     </CardDescription>
                   </CardHeader>

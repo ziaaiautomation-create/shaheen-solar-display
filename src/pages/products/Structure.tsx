@@ -28,11 +28,11 @@ const Structure = () => {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-hero text-primary-foreground py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-3xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Solar Structure Systems</h1>
-              <p className="text-xl text-primary-foreground/90">
+        <section className="bg-gradient-hero text-primary-foreground py-24 md:py-32">
+          <div className="w-full px-6 md:px-12 lg:px-20">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">Solar Structure Systems</h1>
+              <p className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/90">
                 Robust mounting solutions engineered for optimal panel performance and longevity
               </p>
             </div>
@@ -40,10 +40,10 @@ const Structure = () => {
         </section>
 
         {/* Introduction Section */}
-        <section className="py-12 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="text-lg text-muted-foreground mb-8">
+        <section className="py-20 md:py-24 bg-background">
+          <div className="w-full px-6 md:px-12 lg:px-20">
+            <div className="max-w-5xl mx-auto text-center">
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
                 The structural foundation of your solar system is crucial for long-term performance and safety. We provide high-quality mounting structures made from corrosion-resistant materials, designed to withstand harsh weather conditions and ensure optimal panel positioning for maximum energy generation.
               </p>
             </div>
@@ -51,20 +51,20 @@ const Structure = () => {
         </section>
 
         {/* Structure Types */}
-        <section className="py-12 bg-muted">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <section className="py-24 md:py-32 bg-muted/30">
+          <div className="w-full px-6 md:px-12 lg:px-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12 max-w-[1600px] mx-auto">
               {structures.map((structure, index) => (
-                <Card key={index} className="shadow-card hover:shadow-hover transition-all duration-300">
-                  <CardHeader>
-                    <CardTitle className="text-2xl text-primary">{structure.name}</CardTitle>
-                    <CardDescription className="text-base">
+                <Card key={index} className="shadow-card hover:shadow-hover transition-all duration-300 overflow-hidden">
+                  <CardHeader className="p-8 md:p-10">
+                    <CardTitle className="text-3xl md:text-4xl text-primary mb-4">{structure.name}</CardTitle>
+                    <CardDescription className="text-lg md:text-xl">
                       {structure.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="p-8 md:p-10 pt-0">
                     <div className="aspect-video bg-background rounded-md flex items-center justify-center">
-                      <div className="text-6xl font-bold text-primary/20">
+                      <div className="text-7xl md:text-8xl font-bold text-primary/20">
                         {structure.name.split(' ')[0].charAt(0)}
                       </div>
                     </div>
