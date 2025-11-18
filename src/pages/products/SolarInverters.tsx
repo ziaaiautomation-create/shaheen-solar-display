@@ -11,6 +11,8 @@ import goodweImg from "@/assets/products/goodwe-inverter.png";
 import foxImg from "@/assets/products/fox-inverter.png";
 import huaweiImg from "@/assets/products/huawei-inverter.png";
 import sajImg from "@/assets/products/saj-inverter.png";
+import volteckImg from "@/assets/products/volteck-inverter.png";
+import smaImg from "@/assets/products/sma-inverter.png";
 
 const inverters = [
   { name: "MAXPOWER", type: "On-grid / Off-grid", image: maxpowerImg },
@@ -23,8 +25,8 @@ const inverters = [
   { name: "FOX", type: "On-grid / Off-grid", image: foxImg },
   { name: "HUAWEI", type: "On-grid / Off-grid", image: huaweiImg },
   { name: "SAJ", type: "On-grid / Off-grid", image: sajImg },
-  { name: "VOLTECK", type: "On-grid / Off-grid" },
-  { name: "SMA", type: "On-grid / Off-grid" },
+  { name: "VOLTECK", type: "On-grid / Off-grid", image: volteckImg },
+  { name: "SMA", type: "On-grid / Off-grid", image: smaImg },
 ];
 
 const SolarInverters = () => {
