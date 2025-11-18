@@ -8,6 +8,7 @@ import heroImage from "@/assets/hero-solar.jpg";
 import residentialImg from "@/assets/residential-solar.jpg";
 import commercialImg from "@/assets/commercial-solar.jpg";
 import industrialImg from "@/assets/industrial-solar.jpg";
+import shaheenSolarIcon from "@/assets/shaheen-solar-icon.jpg";
 
 const Index = () => {
   return (
@@ -241,43 +242,132 @@ const Index = () => {
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-20 bg-primary text-primary-foreground">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Shaheen Solar Haripur?</h2>
-              <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto">
-                Your trusted partner for sustainable energy solutions
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Why Choose Us</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                We combine expertise, quality, and dedication to deliver exceptional solar solutions.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <CheckCircle2 className="h-12 w-12 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Quality Products</h3>
-                <p className="text-primary-foreground/80">
-                  Premium solar equipment from internationally recognized brands
-                </p>
+            
+            {/* Sun Design with Logo */}
+            <div className="relative w-80 h-80 mx-auto mb-20">
+              {/* Sun Rays - 8 triangular shapes */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                {/* Top ray */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-orange-500" 
+                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}></div>
+                
+                {/* Top-right ray */}
+                <div className="absolute top-8 right-8 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-orange-500 rotate-45"
+                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}></div>
+                
+                {/* Right ray */}
+                <div className="absolute top-1/2 right-0 -translate-y-1/2 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-orange-500 rotate-90"
+                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}></div>
+                
+                {/* Bottom-right ray */}
+                <div className="absolute bottom-8 right-8 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-orange-500 rotate-[135deg]"
+                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}></div>
+                
+                {/* Bottom ray */}
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-orange-500 rotate-180"
+                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}></div>
+                
+                {/* Bottom-left ray */}
+                <div className="absolute bottom-8 left-8 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-orange-500 -rotate-[135deg]"
+                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}></div>
+                
+                {/* Left ray */}
+                <div className="absolute top-1/2 left-0 -translate-y-1/2 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-orange-500 -rotate-90"
+                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}></div>
+                
+                {/* Top-left ray */}
+                <div className="absolute top-8 left-8 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-orange-500 -rotate-45"
+                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}></div>
               </div>
-              <div className="text-center">
-                <Users className="h-12 w-12 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
-                <p className="text-primary-foreground/80">
-                  Experienced professionals dedicated to excellence
-                </p>
+              
+              {/* Center Circle with Logo */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border-8 border-primary bg-white flex items-center justify-center overflow-hidden"
+                   style={{ filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.15))' }}>
+                <img src={shaheenSolarIcon} alt="Shaheen Solar" className="w-40 h-40 object-contain" />
               </div>
-              <div className="text-center">
-                <Award className="h-12 w-12 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Proven Track Record</h3>
-                <p className="text-primary-foreground/80">
-                  Successful installations across residential, commercial, and industrial sectors
-                </p>
-              </div>
-              <div className="text-center">
-                <HeadphonesIcon className="h-12 w-12 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Customer Support</h3>
-                <p className="text-primary-foreground/80">
-                  Comprehensive after-sales service and maintenance
-                </p>
-              </div>
+            </div>
+            
+            {/* Features Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <Card className="shadow-card hover:shadow-hover transition-all duration-300">
+                <CardHeader>
+                  <div className="w-14 h-14 bg-primary rounded-lg flex items-center justify-center mb-3">
+                    <Users className="h-7 w-7 text-primary-foreground" />
+                  </div>
+                  <CardTitle className="text-primary">Expert Team</CardTitle>
+                  <CardDescription>
+                    Highly trained and certified solar professionals with years of industry experience.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="shadow-card hover:shadow-hover transition-all duration-300">
+                <CardHeader>
+                  <div className="w-14 h-14 bg-primary rounded-lg flex items-center justify-center mb-3">
+                    <Award className="h-7 w-7 text-primary-foreground" />
+                  </div>
+                  <CardTitle className="text-primary">Cost Efficiency</CardTitle>
+                  <CardDescription>
+                    Competitive pricing and maximum ROI with significant energy savings.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="shadow-card hover:shadow-hover transition-all duration-300">
+                <CardHeader>
+                  <div className="w-14 h-14 bg-primary rounded-lg flex items-center justify-center mb-3">
+                    <CheckCircle2 className="h-7 w-7 text-primary-foreground" />
+                  </div>
+                  <CardTitle className="text-primary">Quality Products</CardTitle>
+                  <CardDescription>
+                    Premium solar panels and equipment from trusted international manufacturers.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="shadow-card hover:shadow-hover transition-all duration-300">
+                <CardHeader>
+                  <div className="w-14 h-14 bg-primary rounded-lg flex items-center justify-center mb-3">
+                    <CheckCircle2 className="h-7 w-7 text-primary-foreground" />
+                  </div>
+                  <CardTitle className="text-primary">Compliance & Safety</CardTitle>
+                  <CardDescription>
+                    All installations meet international safety standards and local regulations.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="shadow-card hover:shadow-hover transition-all duration-300">
+                <CardHeader>
+                  <div className="w-14 h-14 bg-primary rounded-lg flex items-center justify-center mb-3">
+                    <Sun className="h-7 w-7 text-primary-foreground" />
+                  </div>
+                  <CardTitle className="text-primary">Tailored Solutions</CardTitle>
+                  <CardDescription>
+                    Customized solar systems designed specifically for your unique requirements.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="shadow-card hover:shadow-hover transition-all duration-300">
+                <CardHeader>
+                  <div className="w-14 h-14 bg-primary rounded-lg flex items-center justify-center mb-3">
+                    <HeadphonesIcon className="h-7 w-7 text-primary-foreground" />
+                  </div>
+                  <CardTitle className="text-primary">Customer Satisfaction</CardTitle>
+                  <CardDescription>
+                    Dedicated support team ensuring your complete satisfaction at every step.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
             </div>
           </div>
         </section>
