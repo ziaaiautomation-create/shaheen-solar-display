@@ -320,54 +320,15 @@ const Index = () => {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Why Choose Us</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Why Choose Us?</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 We combine expertise, quality, and dedication to deliver exceptional solar solutions.
               </p>
             </div>
             
-            {/* Sun Design with Logo */}
-            <div className="relative w-80 h-80 mx-auto mb-20">
-              {/* Sun Rays - 8 triangular shapes */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                {/* Top ray */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-orange-500" 
-                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}></div>
-                
-                {/* Top-right ray */}
-                <div className="absolute top-8 right-8 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-orange-500 rotate-45"
-                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}></div>
-                
-                {/* Right ray */}
-                <div className="absolute top-1/2 right-0 -translate-y-1/2 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-orange-500 rotate-90"
-                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}></div>
-                
-                {/* Bottom-right ray */}
-                <div className="absolute bottom-8 right-8 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-orange-500 rotate-[135deg]"
-                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}></div>
-                
-                {/* Bottom ray */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-orange-500 rotate-180"
-                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}></div>
-                
-                {/* Bottom-left ray */}
-                <div className="absolute bottom-8 left-8 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-orange-500 -rotate-[135deg]"
-                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}></div>
-                
-                {/* Left ray */}
-                <div className="absolute top-1/2 left-0 -translate-y-1/2 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-orange-500 -rotate-90"
-                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}></div>
-                
-                {/* Top-left ray */}
-                <div className="absolute top-8 left-8 w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[50px] border-b-orange-500 -rotate-45"
-                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}></div>
-              </div>
-              
-              {/* Center Circle with Logo */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border-8 border-primary flex items-center justify-center overflow-hidden bg-white"
-                   style={{ filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.15))' }}>
-                <img src={shaheenSolarIcon} alt="Shaheen Solar" className="w-full h-full object-cover" />
-              </div>
+            {/* Logo Only */}
+            <div className="flex justify-center mb-16">
+              <img src={shaheenSolarIcon} alt="Shaheen Solar" className="w-32 h-32 object-contain" />
             </div>
             
             {/* Features Grid */}
@@ -443,6 +404,30 @@ const Index = () => {
                   </CardDescription>
                 </CardHeader>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Statistics Section */}
+        <section className="py-16 bg-primary">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">500+</div>
+                <div className="text-primary-foreground/80 text-sm md:text-base">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">15+</div>
+                <div className="text-primary-foreground/80 text-sm md:text-base">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">98%</div>
+                <div className="text-primary-foreground/80 text-sm md:text-base">Client Satisfaction</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">50+</div>
+                <div className="text-primary-foreground/80 text-sm md:text-base">Expert Team Members</div>
+              </div>
             </div>
           </div>
         </section>
