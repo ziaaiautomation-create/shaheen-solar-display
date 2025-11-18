@@ -261,116 +261,116 @@ const Index = () => {
         </section>
 
         {/* Our Products Section */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Products</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <section className="py-24 md:py-32 bg-background">
+          <div className="w-full px-6 md:px-12 lg:px-20">
+            <div className="text-center mb-16 md:mb-20">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">Our Products</h2>
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
                 Premium quality solar equipment from world-renowned manufacturers
               </p>
             </div>
             
-            {/* Scrollable Products Container */}
-            <div className="relative">
+            {/* Products Grid */}
+            <div className="relative max-w-[1800px] mx-auto">
               {/* Left Scroll Button */}
               <button
                 onClick={scrollLeft}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-primary text-primary-foreground p-3 rounded-full shadow-lg hover:bg-primary/90 transition-all"
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/90 transition-all hidden lg:flex items-center justify-center"
                 aria-label="Scroll left"
               >
-                <ChevronLeft className="h-6 w-6" />
+                <ChevronLeft className="h-4 w-4" />
               </button>
 
               {/* Right Scroll Button */}
               <button
                 onClick={scrollRight}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primary text-primary-foreground p-3 rounded-full shadow-lg hover:bg-primary/90 transition-all"
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/90 transition-all hidden lg:flex items-center justify-center"
                 aria-label="Scroll right"
               >
-                <ChevronRight className="h-6 w-6" />
+                <ChevronRight className="h-4 w-4" />
               </button>
 
               {/* Scrollable Container */}
               <div
                 ref={scrollContainerRef}
-                className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth px-12"
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 lg:overflow-x-auto lg:scrollbar-hide lg:scroll-smooth lg:flex"
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
-                <Card className="min-w-[350px] shadow-card hover:shadow-hover transition-all duration-300 flex-shrink-0">
-                  <CardHeader>
-                    <CardTitle>Solar Inverters</CardTitle>
-                    <CardDescription>
+                <Card className="shadow-card hover:shadow-hover transition-all duration-300 flex flex-col h-full min-h-[280px] lg:min-w-[400px] lg:flex-shrink-0">
+                  <CardHeader className="p-8 md:p-10 flex-1">
+                    <CardTitle className="text-2xl md:text-3xl mb-4">Solar Inverters</CardTitle>
+                    <CardDescription className="text-base md:text-lg">
                       High-efficiency inverters from leading brands for reliable power conversion
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="p-8 md:p-10 pt-0">
                     <Link to="/products/solar-inverters">
-                      <Button variant="outline" className="w-full">
-                        View Products <ArrowRight className="ml-2 h-4 w-4" />
+                      <Button variant="outline" className="w-full text-base md:text-lg py-6">
+                        View Products <ArrowRight className="ml-2 h-5 w-5" />
                       </Button>
                     </Link>
                   </CardContent>
                 </Card>
 
-                <Card className="min-w-[350px] shadow-card hover:shadow-hover transition-all duration-300 flex-shrink-0">
-                  <CardHeader>
-                    <CardTitle>Solar Panels</CardTitle>
-                    <CardDescription>
+                <Card className="shadow-card hover:shadow-hover transition-all duration-300 flex flex-col h-full min-h-[280px] lg:min-w-[400px] lg:flex-shrink-0">
+                  <CardHeader className="p-8 md:p-10 flex-1">
+                    <CardTitle className="text-2xl md:text-3xl mb-4">Solar Panels</CardTitle>
+                    <CardDescription className="text-base md:text-lg">
                       Premium solar panels with high efficiency and long-lasting performance
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="p-8 md:p-10 pt-0">
                     <Link to="/products/solar-panels">
-                      <Button variant="outline" className="w-full">
-                        View Products <ArrowRight className="ml-2 h-4 w-4" />
+                      <Button variant="outline" className="w-full text-base md:text-lg py-6">
+                        View Products <ArrowRight className="ml-2 h-5 w-5" />
                       </Button>
                     </Link>
                   </CardContent>
                 </Card>
 
-                <Card className="min-w-[350px] shadow-card hover:shadow-hover transition-all duration-300 flex-shrink-0">
-                  <CardHeader>
-                    <CardTitle>Batteries</CardTitle>
-                    <CardDescription>
+                <Card className="shadow-card hover:shadow-hover transition-all duration-300 flex flex-col h-full min-h-[280px] lg:min-w-[400px] lg:flex-shrink-0">
+                  <CardHeader className="p-8 md:p-10 flex-1">
+                    <CardTitle className="text-2xl md:text-3xl mb-4">Batteries</CardTitle>
+                    <CardDescription className="text-base md:text-lg">
                       Advanced lithium-ion batteries for efficient energy storage
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="p-8 md:p-10 pt-0">
                     <Link to="/products/batteries">
-                      <Button variant="outline" className="w-full">
-                        View Products <ArrowRight className="ml-2 h-4 w-4" />
+                      <Button variant="outline" className="w-full text-base md:text-lg py-6">
+                        View Products <ArrowRight className="ml-2 h-5 w-5" />
                       </Button>
                     </Link>
                   </CardContent>
                 </Card>
 
-                <Card className="min-w-[350px] shadow-card hover:shadow-hover transition-all duration-300 flex-shrink-0">
-                  <CardHeader>
-                    <CardTitle>Structure</CardTitle>
-                    <CardDescription>
-                      Durable mounting structures and support systems for solar installations
+                <Card className="shadow-card hover:shadow-hover transition-all duration-300 flex flex-col h-full min-h-[280px] lg:min-w-[400px] lg:flex-shrink-0">
+                  <CardHeader className="p-8 md:p-10 flex-1">
+                    <CardTitle className="text-2xl md:text-3xl mb-4">Structure & Mounting</CardTitle>
+                    <CardDescription className="text-base md:text-lg">
+                      Durable mounting systems designed for Pakistan's climate conditions
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="p-8 md:p-10 pt-0">
                     <Link to="/products/structure">
-                      <Button variant="outline" className="w-full">
-                        View Products <ArrowRight className="ml-2 h-4 w-4" />
+                      <Button variant="outline" className="w-full text-base md:text-lg py-6">
+                        View Products <ArrowRight className="ml-2 h-5 w-5" />
                       </Button>
                     </Link>
                   </CardContent>
                 </Card>
 
-                <Card className="min-w-[350px] shadow-card hover:shadow-hover transition-all duration-300 flex-shrink-0">
-                  <CardHeader>
-                    <CardTitle>Net Metering</CardTitle>
-                    <CardDescription>
-                      Advanced metering solutions for monitoring and optimizing energy usage
+                <Card className="shadow-card hover:shadow-hover transition-all duration-300 flex flex-col h-full min-h-[280px] lg:min-w-[400px] lg:flex-shrink-0">
+                  <CardHeader className="p-8 md:p-10 flex-1">
+                    <CardTitle className="text-2xl md:text-3xl mb-4">Net Metering Solutions</CardTitle>
+                    <CardDescription className="text-base md:text-lg">
+                      Complete net metering setup and documentation services
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="p-8 md:p-10 pt-0">
                     <Link to="/products/metering">
-                      <Button variant="outline" className="w-full">
-                        View Products <ArrowRight className="ml-2 h-4 w-4" />
+                      <Button variant="outline" className="w-full text-base md:text-lg py-6">
+                        View Products <ArrowRight className="ml-2 h-5 w-5" />
                       </Button>
                     </Link>
                   </CardContent>
