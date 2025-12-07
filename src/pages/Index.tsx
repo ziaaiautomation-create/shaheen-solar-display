@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useState, useRef } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AIChatbot from "@/components/AIChatbot";
 import heroImage from "@/assets/hero-solar.jpg";
 import residentialImg from "@/assets/residential-solar.jpg";
 import commercialImg from "@/assets/commercial-solar.jpg";
@@ -575,6 +576,7 @@ const Index = () => {
       </main>
 
       <Footer />
+      <AIChatbot />
     </div>
   );
 };
