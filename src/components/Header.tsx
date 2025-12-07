@@ -87,6 +87,9 @@ const Header = () => {
             <Link to="/reviews" className="px-4 py-2 text-foreground hover:text-primary transition-colors font-medium">
               REVIEWS
             </Link>
+            <Link to="/solar-calculator" className="px-4 py-2 text-foreground hover:text-primary transition-colors font-medium">
+              CALCULATOR
+            </Link>
             <Link to="/blog" className="px-4 py-2 text-foreground hover:text-primary transition-colors font-medium">
               BLOG
             </Link>
@@ -150,6 +153,9 @@ const Header = () => {
             </Link>
             <Link to="/reviews" className="block px-4 py-3 text-foreground hover:bg-muted transition-colors" onClick={toggleMenu}>
               REVIEWS
+            </Link>
+            <Link to="/solar-calculator" className="block px-4 py-3 text-foreground hover:bg-muted transition-colors" onClick={toggleMenu}>
+              CALCULATOR
             </Link>
             <Link to="/blog" className="block px-4 py-3 text-foreground hover:bg-muted transition-colors" onClick={toggleMenu}>
               BLOG
