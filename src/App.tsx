@@ -9,6 +9,7 @@ import CompanyProfile from "./pages/CompanyProfile";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import Reviews from "./pages/Reviews";
+import SolarCalculator from "./pages/SolarCalculator";
 import Blog from "./pages/Blog";
 import SolarPanels from "./pages/products/SolarPanels";
 import SolarInverters from "./pages/products/SolarInverters";
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/reviews" element={<Reviews />} />
+          <Route path="/solar-calculator" element={<SolarCalculator />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/products/solar-panels" element={<SolarPanels />} />
           <Route path="/products/solar-inverters" element={<SolarInverters />} />
