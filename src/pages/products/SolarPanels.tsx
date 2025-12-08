@@ -9,7 +9,6 @@ import longiSolar from "@/assets/products/longi-solar.png";
 import trinaSolar from "@/assets/products/trina-solar.png";
 import astronergySolar from "@/assets/products/astronergy-solar.png";
 import aikoSolar from "@/assets/products/aiko-solar.png";
-import jinkoTigerNeo from "@/assets/products/jinko-tiger-neo.png";
 
 const solarPanels = [
   { name: "CANADIAN SOLAR", description: "High-efficiency monocrystalline panels with excellent performance", image: canadianSolar },
@@ -20,7 +19,6 @@ const solarPanels = [
   { name: "TRINA SOLAR", description: "Trusted brand with global presence and reliability", image: trinaSolar },
   { name: "ASTRONERGY", description: "High-performance solar modules for all applications", image: astronergySolar },
   { name: "AIKO", description: "Innovative solar technology with exceptional output", image: aikoSolar },
-  { name: "Jinko Solar Panel Tiger Neo 60HL4-(V) 470-500W", description: "N-type Bifacial Module with HOT 2.0 Technology for maximum efficiency", image: jinkoTigerNeo },
 ];
 
 const SolarPanels = () => {
