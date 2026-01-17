@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -15,6 +15,18 @@ interface Appliance {
 }
 
 const SolarCalculator = () => {
+  const heroRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"]
+  });
+  
+  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const heroTextY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+  const iconRotate = useTransform(scrollYProgress, [0, 1], [0, 180]);
+
   const [appliances, setAppliances] = useState<Appliance[]>([
     { name: "Tube Light", watts: 40, quantity: 0 },
     { name: "Energy Savers", watts: 25, quantity: 0 },
@@ -59,14 +71,22 @@ const SolarCalculator = () => {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative w-full py-16 md:py-24 bg-gradient-to-br from-primary/10 via-background to-secondary/10 overflow-hidden">
-        <div className="w-full px-6 md:px-12 lg:px-20">
+      {/* Hero Section with Parallax */}
+      <section ref={heroRef} className="relative w-full py-16 md:py-24 overflow-hidden">
+        <motion.div 
+          className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10"
+          style={{ scale: heroScale }}
+        />
+        <motion.div 
+          className="w-full px-6 md:px-12 lg:px-20 relative z-10"
+          style={{ y: heroTextY, opacity: heroOpacity }}
+        >
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
+              style={{ rotate: iconRotate }}
               className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/20 mb-6"
             >
               <Calculator className="h-10 w-10 text-primary" />
@@ -88,7 +108,7 @@ const SolarCalculator = () => {
               Solar system in Pakistan price calculator by Shaheen Solar offers comprehensive price quotes for your desired solar solutions. Calculate your load and get an instant estimate.
             </motion.p>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Calculator Section */}

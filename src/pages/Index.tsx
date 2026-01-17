@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Sun, Factory, Home, CheckCircle2, Users, Award, HeadphonesIcon, ChevronLeft, ChevronRight, Settings, DollarSign, Wrench, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -18,6 +18,16 @@ import shaheenSolarIcon from "@/assets/shaheen-solar-icon.jpg";
 
 const Index = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"]
+  });
+  
+  const heroImageY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const heroTextY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -36,13 +46,19 @@ const Index = () => {
       <Header />
       
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0">
-            <img src={heroImage} alt="Solar Installation" className="w-full h-full object-cover" />
+        {/* Hero Section with Parallax */}
+        <section ref={heroRef} className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+          <motion.div 
+            className="absolute inset-0"
+            style={{ y: heroImageY }}
+          >
+            <img src={heroImage} alt="Solar Installation" className="w-full h-[120%] object-cover" />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70"></div>
-          </div>
-          <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 text-center">
+          </motion.div>
+          <motion.div 
+            className="relative z-10 w-full px-6 md:px-12 lg:px-20 text-center"
+            style={{ y: heroTextY, opacity: heroOpacity }}
+          >
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -70,7 +86,7 @@ const Index = () => {
                 </Button>
               </Link>
             </motion.div>
-          </div>
+          </motion.div>
         </section>
 
         {/* Benefits Section */}

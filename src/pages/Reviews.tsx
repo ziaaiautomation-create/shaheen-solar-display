@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -47,14 +48,32 @@ const reviews = [
 ];
 
 const Reviews = () => {
+  const heroRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"]
+  });
+  
+  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const heroTextY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="bg-gradient-hero text-primary-foreground py-20 overflow-hidden">
-          <div className="container mx-auto px-4">
+        {/* Hero Section with Parallax */}
+        <section ref={heroRef} className="relative bg-gradient-hero text-primary-foreground py-20 overflow-hidden">
+          <motion.div 
+            className="absolute inset-0 bg-gradient-hero"
+            style={{ scale: heroScale }}
+          />
+          <motion.div 
+            className="container mx-auto px-4 relative z-10"
+            style={{ y: heroTextY, opacity: heroOpacity }}
+          >
             <div className="text-center max-w-3xl mx-auto">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
@@ -73,7 +92,7 @@ const Reviews = () => {
                 See what our clients say about their solar experience with Shaheen Solar Haripur
               </motion.p>
             </div>
-          </div>
+          </motion.div>
         </section>
 
         {/* Overall Rating */}
