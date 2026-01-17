@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
@@ -13,6 +13,17 @@ import { AnimatedContainer, AnimatedItem } from "@/components/AnimatedContainer"
 
 const Contact = () => {
   const { toast } = useToast();
+  const heroRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"]
+  });
+  
+  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const heroTextY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -39,9 +50,16 @@ const Contact = () => {
       <Header />
       
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="bg-gradient-hero text-primary-foreground py-20 overflow-hidden">
-          <div className="container mx-auto px-4">
+        {/* Hero Section with Parallax */}
+        <section ref={heroRef} className="relative bg-gradient-hero text-primary-foreground py-20 overflow-hidden">
+          <motion.div 
+            className="absolute inset-0 bg-gradient-hero"
+            style={{ scale: heroScale }}
+          />
+          <motion.div 
+            className="container mx-auto px-4 relative z-10"
+            style={{ y: heroTextY, opacity: heroOpacity }}
+          >
             <div className="text-center max-w-3xl mx-auto">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
@@ -60,7 +78,7 @@ const Contact = () => {
                 Get in touch with our team for any inquiries or to schedule a free consultation
               </motion.p>
             </div>
-          </div>
+          </motion.div>
         </section>
 
         {/* Contact Information & Form Section */}
