@@ -15,9 +15,9 @@ const Header = () => {
         <div className="container mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           {/* Phone & Email */}
           <div className="flex items-center gap-4 text-sm">
-            <a href="tel:+923001234567" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+            <a href="tel:+923075630186" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
               <Phone className="h-4 w-4" />
-              <span>+92 300 1234567</span>
+              <span>0307 5630186</span>
             </a>
             <a href="mailto:shaheensolar@gmail.com" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
               <Mail className="h-4 w-4" />
