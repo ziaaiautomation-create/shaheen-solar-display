@@ -566,9 +566,9 @@ const Index = () => {
             </AnimatedSection>
             <AnimatedSection animation="scaleIn" delay={0.4}>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <a href="tel:+923175486662">
+                <a href="tel:+923075630186">
                   <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-12 py-7 text-xl shadow-lg">
-                    +92 317 5486662
+                    0307 5630186
                   </Button>
                 </a>
                 <Link to="/contact">
